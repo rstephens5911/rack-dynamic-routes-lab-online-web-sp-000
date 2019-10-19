@@ -9,7 +9,7 @@ class Application
       item = @@items.find{ |i| i.name == item_name }
       resp.write item.price
       resp.status = 200
-    elsif @@items.include?(item_name) = false
+    elsif @@items.include?(item_name) == false
           resp.write "Item not found"
           resp.status = 400
 
