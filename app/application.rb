@@ -7,7 +7,7 @@ class Application
     if req.path != "/items"
       resp.write "Route not found"
       resp.status = 404
-    elsif req.path == "/items/<ITEM NAME>"
+    elsif req.path == "/items"
       Item.all do |item|
         resp.write "#{Item.all[item]}".first
       end
