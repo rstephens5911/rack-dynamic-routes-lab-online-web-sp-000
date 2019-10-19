@@ -7,9 +7,6 @@ class Application
     if req.path != "/items"
       reps.status = 404
       resp.write "#{items.price}"
-    else
-      resp.write "Route not found"
-      resp.status = 400
     end
   resp.finish
 end
