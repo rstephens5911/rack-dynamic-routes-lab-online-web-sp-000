@@ -9,8 +9,6 @@ class Application
       item = @@items.find{ |i| i.name == item_name }
       resp.write item.price
       resp.status = 200
-    elsif !@@items.include?(req.path)
-      resp.status = 400
 
 
     else resp.write "Route not found"
