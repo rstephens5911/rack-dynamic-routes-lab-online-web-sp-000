@@ -12,7 +12,6 @@ class Application
     elsif !@@items.include?(item_name)
           resp.write "Item not found"
           resp.status = 400
-        end
 
 
     elsif !req.path.match (/items/)
