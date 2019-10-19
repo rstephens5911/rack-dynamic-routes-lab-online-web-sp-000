@@ -16,7 +16,7 @@ class Application
           resp.write "Item not found"
           resp.status = 400
         end
-        
+
 
     elsif !req.path.match (/items/)
       resp.write "Route not found"
