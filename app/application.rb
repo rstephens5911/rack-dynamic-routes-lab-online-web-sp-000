@@ -6,7 +6,7 @@ class Application
 
     if req.path == "/items"
       if @@item.include?(item)
-        resp.write "#{Item.price}"
+        resp.write "#{item.price}"
         resp.status = 200
       else resp.write "Item not found"
         resp.status = 400
