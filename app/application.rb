@@ -8,7 +8,8 @@ class Application
       resp.write "Route not found"
       resp.status = 404
     elsif req.path == "/items/<ITEM NAME>"
-      resp.write "#{Item.price}"
+      Item.all do |item|
+        resp.write "#{item}".first
     end
   resp.finish
 end
