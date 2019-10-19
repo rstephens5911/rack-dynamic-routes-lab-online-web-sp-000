@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path == "/item"
+    if req.path == "/items"
       @@items.each do |i|
         if @@items.include?(i)
           resp.write i.price
