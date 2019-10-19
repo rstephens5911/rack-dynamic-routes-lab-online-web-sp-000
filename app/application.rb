@@ -10,6 +10,14 @@ class Application
       resp.write item.price
       resp.status = 200
 
+    elsif rep.path.match(/items/)
+      item_name = req.path.split("/items/").last
+        if !@@item.include?(item_name)
+          resp.write "Item not found"
+          resp.status = 400
+        end
+        
+
     elsif !req.path.match (/items/)
       resp.write "Route not found"
       resp.status = 404
