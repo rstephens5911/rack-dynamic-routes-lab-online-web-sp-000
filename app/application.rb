@@ -10,6 +10,7 @@ class Application
     elsif req.path == "/items/<ITEM NAME>"
       Item.all do |item|
         resp.write "#{item}".first
+      end
     end
   resp.finish
 end
