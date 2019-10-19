@@ -6,11 +6,11 @@ class Application
 
     if req.path == "/items/<ITEM NAME>"
       if @@item.include?(item)
-      resp.write "#{Item.price}"
-      resp.status = 200
-    else resp.write "Item not found"
-      resp.status = 400
-    end
+        resp.write "#{Item.price}"
+        resp.status = 200
+      else resp.write "Item not found"
+        resp.status = 400
+      end
     elsif req.path != "/items"
       resp.write "Route not found"
       resp.status = 404
