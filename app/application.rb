@@ -8,7 +8,7 @@ class Application
       resp.write "#{item.name} #{ite.price}"
     else
       resp.write "Item not found"
-      resp.staus = 404
+      resp.status = 404
     end
   resp.finish
 end
