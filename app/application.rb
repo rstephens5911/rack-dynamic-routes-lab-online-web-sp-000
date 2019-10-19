@@ -9,7 +9,7 @@ class Application
       resp.status = 404
     elsif req.path == "/items/<ITEM NAME>"
       Item.all do |item|
-        resp.write "#{item}".first
+        resp.write "#{Item.all[item]}".first
       end
     end
   resp.finish
