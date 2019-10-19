@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path == "/items/<ITEM NAME>"
+    if req.path == "/items"
       if @@item.include?(item)
         resp.write "#{Item.price}"
         resp.status = 200
