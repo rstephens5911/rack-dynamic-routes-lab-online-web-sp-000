@@ -5,8 +5,8 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path == "/items"
-      @@items.map do |i|
-        if @@items.include?(i)
+      @@item.each do |i|
+        if @@item.include?(i)
           resp.write i.price
           resp.status = 200
         else resp.write "Item not found"
