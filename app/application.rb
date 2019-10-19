@@ -6,7 +6,6 @@ class Application
 
     if req.path != "/items/<ITEM NAME>"
       resp.status = 404
-      resp.write "#{items.price}"
     end
   resp.finish
 end
