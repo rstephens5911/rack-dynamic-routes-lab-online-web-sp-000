@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path != "/items"
+    if req.path != "/items/<ITEM NAME>"
       resp.status = 404
       resp.write "#{items.price}"
     end
