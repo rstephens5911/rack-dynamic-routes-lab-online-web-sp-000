@@ -5,7 +5,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path == "/items"
-      @@items.each do |i|
+      @@items.map do |i|
         if @@items.include?(i)
           resp.write i.price
           resp.status = 200
